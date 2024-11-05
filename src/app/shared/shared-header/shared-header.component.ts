@@ -13,6 +13,6 @@ import { sharedImports } from '../shared.materialImports';
 export class SharedHeaderComponent implements OnInit {
 
   ngOnInit() {
-    console.log('Header component initialized');
+    console.log('Header component initialized') ;
   }
 }
