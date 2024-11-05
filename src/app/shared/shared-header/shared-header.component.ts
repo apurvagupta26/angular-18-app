@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { sharedImports } from '../shared.materialImports';
 
 @Component({
@@ -10,6 +10,9 @@ import { sharedImports } from '../shared.materialImports';
   templateUrl: './shared-header.component.html',
   styleUrl: './shared-header.component.scss'
 })
-export class SharedHeaderComponent {
+export class SharedHeaderComponent implements OnInit {
 
+  ngOnInit() {
+    console.log('Header component initialized');
+  }
 }
