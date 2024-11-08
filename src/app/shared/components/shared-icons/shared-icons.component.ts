@@ -1,7 +1,7 @@
 import { Component, inject } from '@angular/core';
-import { MatIconModule, MatIconRegistry } from '@angular/material/icon';
+import { MatIconRegistry } from '@angular/material/icon';
 import { DomSanitizer } from '@angular/platform-browser';
-import { sharedImports } from '../shared.materialImports';
+import { sharedImports } from '../../shared.materialImports';
 
 @Component({
   selector: 'app-shared-icons',
@@ -25,7 +25,7 @@ export class SharedIconsComponent {
     svgIconList.forEach((icon: string) => {
       this.matIconRegistry.addSvgIcon(
         icon,
-        this.domSanitizer.bypassSecurityTrustResourceUrl(`assets/icons/svgs/${icon}.svg`)
+        this.domSanitizer.bypassSecurityTrustResourceUrl(`../../../assets/icons/svgs/${icon}.svg`)
       );
     });
   }

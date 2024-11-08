@@ -27,21 +27,11 @@
             "inlineStyleLanguage": "scss",
             "baseHref": "http://localhost:4200",
             "assets": [
-              {
-                "glob": "**/*",
-                "input": "src/assets/icons/svgs"
-              },
+              "src/assets",
+              "src/assets/icons/svgs",
               {
                 "glob": "**/*",
                 "input": "public"
-              },
-              {
-                "glob": "**/*",
-                "input": "src/assets/icons/pngs"
-              },
-              {
-                "glob": "**/*",
-                "input": "src/assets"
               }
             ],
             "styles": [

@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { sharedImports } from '../shared.materialImports';
+import { sharedImports } from '../../shared.materialImports';
 import { SharedIconsComponent } from '../shared-icons/shared-icons.component';
 
 @Component({
@@ -12,6 +12,9 @@ import { SharedIconsComponent } from '../shared-icons/shared-icons.component';
   templateUrl: './shared-header.component.html',
   styleUrl: './shared-header.component.scss'
 })
-export class SharedHeaderComponent {
+export class SharedHeaderComponent implements OnInit {
 
+  ngOnInit(): void {
+    
+  }
 }
