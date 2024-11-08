@@ -1,6 +1,8 @@
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import { SharedHeaderComponent } from './shared/shared-header/shared-header.component';
+import { MatIconRegistry } from '@angular/material/icon';
+import { DomSanitizer } from '@angular/platform-browser';
 
 @Component({
   selector: 'app-root',
@@ -10,5 +12,22 @@ import { SharedHeaderComponent } from './shared/shared-header/shared-header.comp
   styleUrl: './app.component.scss'
 })
 export class AppComponent {
-  title = 'angular-18-app';
+
+  private matIconRegistry = inject(MatIconRegistry);
+  private domSanitizer = inject(DomSanitizer);
+
+  constructor() {
+    const svgIconList = [
+      'dashboard',
+      'arrow-forward',
+      'settings'
+    ];
+
+    svgIconList.forEach((icon: string) => {
+      this.matIconRegistry.addSvgIcon(
+        icon,
+        this.domSanitizer.bypassSecurityTrustResourceUrl(`${icon}.svg`)
+      );
+    });
+  }
 }

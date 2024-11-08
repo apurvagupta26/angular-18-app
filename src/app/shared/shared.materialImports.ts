@@ -13,5 +13,5 @@ export const sharedImports = [
   ReactiveFormsModule,
   MatToolbarModule,
   MatButtonModule,
-  MatIconModule,
+  MatIconModule
 ];
