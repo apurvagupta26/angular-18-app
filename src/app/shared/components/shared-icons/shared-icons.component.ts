@@ -19,7 +19,8 @@ export class SharedIconsComponent {
     const svgIconList = [
       'dashboard',
       'arrow-forward',
-      'settings'
+      'settings',
+      "close"
     ];
 
     svgIconList.forEach((icon: string) => {

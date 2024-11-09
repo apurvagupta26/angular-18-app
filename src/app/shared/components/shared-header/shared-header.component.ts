@@ -1,6 +1,8 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, inject, OnInit } from '@angular/core';
 import { sharedImports } from '../../shared.materialImports';
 import { SharedIconsComponent } from '../shared-icons/shared-icons.component';
+import { VersionDialogComponent } from '../../dialogs/version/version-dialog.component';
+import { MatDialog } from '@angular/material/dialog';
 
 @Component({
   selector: 'app-shared-header',
@@ -13,8 +15,15 @@ import { SharedIconsComponent } from '../shared-icons/shared-icons.component';
   styleUrl: './shared-header.component.scss'
 })
 export class SharedHeaderComponent implements OnInit {
+  readonly dialog = inject(MatDialog);
 
   ngOnInit(): void {
     
+  }
+
+  openDialog(): void {
+    this.dialog.open(VersionDialogComponent, {
+      
+    });
   }
 }

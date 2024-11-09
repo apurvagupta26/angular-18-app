@@ -1,0 +1,15 @@
+<div class="appversion-dialog">
+    <div (click)="onClose()" class="close-icon">
+        <mat-icon svgIcon="close"></mat-icon>
+    </div>
+    <div class="version-details">
+        <b>About Dashboard</b>
+        <span>
+            Version: {{appVersion.version}}
+        </span>
+        <span>
+            Date Updated: {{ date | date:'MM/dd/yyyy' }}
+        </span>
+    </div>
+</div>
+

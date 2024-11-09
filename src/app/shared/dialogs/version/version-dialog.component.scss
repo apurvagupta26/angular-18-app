@@ -1,0 +1,22 @@
+.appversion-dialog{
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    padding: 0px 24px;
+    justify-content: space-between;
+
+    .version-details {
+        display: flex;
+        padding: 20px 26px 26px;
+        flex-direction: column;
+    }
+
+    .close-icon {
+        margin-bottom: 58px;
+        cursor: pointer;
+    }
+}
+
+b {
+    padding-bottom: 4px;
+}
