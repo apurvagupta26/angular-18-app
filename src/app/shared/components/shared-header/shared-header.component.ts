@@ -1,6 +1,5 @@
 import { Component, inject, OnInit } from '@angular/core';
 import { sharedImports } from '../../shared.materialImports';
-import { SharedIconsComponent } from '../shared-icons/shared-icons.component';
 import { VersionDialogComponent } from '../../dialogs/version/version-dialog.component';
 import { MatDialog } from '@angular/material/dialog';
 
@@ -9,7 +8,6 @@ import { MatDialog } from '@angular/material/dialog';
   standalone: true,
   imports: [
     ...sharedImports,
-    SharedIconsComponent
   ],
   templateUrl: './shared-header.component.html',
   styleUrl: './shared-header.component.scss'

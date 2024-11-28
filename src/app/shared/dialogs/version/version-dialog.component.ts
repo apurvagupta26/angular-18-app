@@ -14,7 +14,7 @@ export class VersionDialogComponent implements OnInit {
   appVersion = versions;
   date:string | undefined
   
-  readonly dialogRef = inject(MatDialogRef<VersionDialogComponent>);
+  dialogRef = inject(MatDialogRef<VersionDialogComponent>);
 
   ngOnInit(): void {
     const versionDate = new Date(this.appVersion.versionDate);
