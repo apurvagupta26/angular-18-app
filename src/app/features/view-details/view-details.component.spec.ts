@@ -1,6 +1,8 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { ViewDetailsComponent } from './view-details.component';
+import { provideHttpClient } from '@angular/common/http';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 describe('ViewDetailsComponent', () => {
   let component: ViewDetailsComponent;
@@ -8,7 +10,10 @@ describe('ViewDetailsComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [ViewDetailsComponent]
+      imports: [ViewDetailsComponent, BrowserAnimationsModule],
+      providers:[
+        provideHttpClient()
+      ]
     })
     .compileComponents();
 

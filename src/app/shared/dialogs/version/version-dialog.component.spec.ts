@@ -1,18 +1,22 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
+import { VersionDialogComponent } from './version-dialog.component';
+import { MatDialogRef } from '@angular/material/dialog';
 
-import { VersionComponent } from './version-dialog.component';
 
-describe('VersionComponent', () => {
-  let component: VersionComponent;
-  let fixture: ComponentFixture<VersionComponent>;
+describe('VersionDialogComponent', () => {
+  let component: VersionDialogComponent;
+  let fixture: ComponentFixture<VersionDialogComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [VersionComponent]
+      imports: [VersionDialogComponent],
+      providers:[ 
+         { provide: MatDialogRef, useValue: {} }
+        ]
     })
     .compileComponents();
 
-    fixture = TestBed.createComponent(VersionComponent);
+    fixture = TestBed.createComponent(VersionDialogComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
